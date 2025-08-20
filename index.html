@@ -4,7 +4,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>APP DE DEVISES !!!</title>
-   <link rel="stylesheet" href="Style.css">
+   <link rel="stylesheet" href="style.css">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
    <div class="container">
@@ -31,9 +32,10 @@
            </div>
            
            <button class="swap-btn" onclick="swapCurrencies()" title="Échanger les devises">
-               ⇄
+               <i class='bx bx-sort'></i>
            </button>
-           
+           <!-- Les monnaies  d'echanges !!!-->
+         
            <div class="currency-group">
                <label>Vers</label>
                <select id="toCurrency">
@@ -48,7 +50,7 @@
 
        <div class="button-row">
            <button class="btn btn-secondary" onclick="clearAll()">Copier</button>
-           <button class="btn btn-primary" onclick="convertCurrency()">Convertir</button>
+           <button class="btn btn-primary" onclick="convertCurrency()">Convertisseur</button>
        </div>
 
        <div class="result-container" id="result">
@@ -62,7 +64,7 @@
        <div class="footer-info">
            Bases: <span class="highlight">EUR : 1</span>
            <br>
-           Astuce: Cliquer sur "⇄" pour inverser les devises
+           Astuce: Cliquer sur "<i class='bx bx-sort'></i>" pour inverser les devises
        </div>
    </div>
 
