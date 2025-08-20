@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>APP DE DEVISES !!!</title>
+   <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+   <div class="container">
+       <h2>Convertisseur de devises</h2>
+       <p class="subtitle">Max 5 devises - Taux statiques définis dans le code (pas d'API)</p>
+       
+       <div class="form-group">
+           <label for="amount">Montant</label>
+           <input type="number" id="amount" placeholder="1000" min="0" step="0.01">
+       </div>
+
+       <p class="precision-label">Précision d'affichage (décimales)</p>
+       
+       <div class="currency-row">
+           <div class="currency-group">
+               <label>De</label>
+               <select id="fromCurrency">
+                   <option value="EUR">EUR — Euro</option>
+                   <option value="USD">USD — Dollar US</option>
+                   <option value="XOF">XOF — Franc CFA (BCEAO)</option>
+                   <option value="GBP">GBP — Livre Sterling</option>
+                   <option value="CNY">CNY — Yuan Chinois</option>
+               </select>
+           </div>
+           
+           <button class="swap-btn" onclick="swapCurrencies()" title="Échanger les devises">
+               ⇄
+           </button>
+           
+           <div class="currency-group">
+               <label>Vers</label>
+               <select id="toCurrency">
+                   <option value="XOF">XOF — Franc CFA (BCEAO)</option>
+                   <option value="EUR">EUR — Euro</option>
+                   <option value="USD">USD — Dollar US</option>
+                   <option value="GBP">GBP — Livre Sterling</option>
+                   <option value="CNY">CNY — Yuan Chinois</option>
+               </select>
+           </div>
+       </div>
+
+       <div class="button-row">
+           <button class="btn btn-secondary" onclick="clearAll()">Copier</button>
+           <button class="btn btn-primary" onclick="convertCurrency()">Convertir</button>
+       </div>
+
+       <div class="result-container" id="result">
+           <div class="result-amount" id="resultAmount">655 957,00 CFA</div>
+           <div class="result-details">
+               <span>1 EUR = 655,957 XOF</span>
+               <span>Calculs: 1000×655,957=655,957</span>
+           </div>
+       </div>
+
+       <div class="footer-info">
+           Bases: <span class="highlight">EUR : 1</span>
+           <br>
+           Astuce: Cliquer sur "⇄" pour inverser les devises
+       </div>
+   </div>
+
+   <script src="Script.js"></script>
+</body>
+</html>
